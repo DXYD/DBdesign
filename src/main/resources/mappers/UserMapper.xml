@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbdesign.keshe.dao.UserMapper">
+
+    <select id="querylistuser" resultType="User">
+    select * from user
+    </select>
+
+    <select id="queryWordInfo" resultType="enWords">
+    select * from enwords where word = #{word}
+    </select>
+
+    <select id="queryWordInfoById" resultType="enWords">
+    select * from enwords where wordId = #{wordid}
+    </select>
+
+    <select id="queryNoteInfoById" resultType="Note">
+    select * from Note where wordid = #{wordid}
+    </select>
+
+    <select id="getnotes" resultType="Note">
+    select * from Note
+    </select>
+
+    <insert id="addnote" parameterType="Note">
+    insert into note(wordid,word,translation) values (#{wordid},#{word},#{translation})
+    </insert>
+    <delete id="delnote" parameterType="Note">
+    delete from note where wordid=#{wordid}
+    </delete>
+
+</mapper>

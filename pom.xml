@@ -8,8 +8,8 @@
         <version>2.4.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.codemilk</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>com.DBdesign</groupId>
+    <artifactId>keshe</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>keshe</name>
     <description>Demo project for Spring Boot</description>
@@ -31,6 +31,24 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <!--		mybatis依赖-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.2</version>
+        </dependency>
+        <!--		mysql依赖-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.24</version>
+        </dependency>
+        <!-- 添加 FastJSON依赖 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.59</version>
         </dependency>
     </dependencies>
 
