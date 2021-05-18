@@ -19,7 +19,7 @@ import java.util.Map;
  */
 @Controller
 @ResponseBody
-@RequestMapping("/admin")
+@RequestMapping("/user")
 public class indexController {
 
     @Autowired
