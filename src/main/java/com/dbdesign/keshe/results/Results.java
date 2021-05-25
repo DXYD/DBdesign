@@ -15,6 +15,7 @@ public class Results<T> {
     List<T> datas;
     T data;
 
+
     public Results(Integer code, String msg, T data) {
         this.code = code;
         this.msg = msg;
