@@ -1,5 +1,6 @@
 package com.dbdesign.keshe.controller;
 
+import com.dbdesign.keshe.results.AdminResults;
 import com.dbdesign.keshe.results.Results;
 import com.dbdesign.keshe.services.AdminServices;
 import org.apache.ibatis.annotations.Param;
@@ -20,5 +21,17 @@ public class AdminController {
 
     @PostMapping("/login")
     public Results login(String username,String password){return adminServices.adminLogin(username, password);}
+
+    @GetMapping("/getUserList")
+    public AdminResults getUserList(int page, int limit){return adminServices.getUserList(page,limit);}
+
+    @GetMapping("/getUserByUid")
+    public AdminResults getUserByUid(int uid){return adminServices.getUserByUid(uid);}
+
+    @GetMapping("/addUser")
+    public AdminResults addUser(String username,String password){return adminServices.addUser(username,password);}
+
+    @GetMapping("/delUserByUn")
+    public AdminResults delUserByUid(String username){return adminServices.delUserByUn(username);}
 
 }

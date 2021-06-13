@@ -8,14 +8,14 @@ import com.dbdesign.keshe.results.Results;
  */
 public interface CommentServices {
 
-    public Results getComment();
+    Results getComment();
 
-    public Results getCommentByUn(String username);
+    Results getCommentByUn(String username);
 
-    public Results delCommentById(int cid);
+    Results delCommentById(int cid);
 
-    public Results addCommentByUn(String username,String content,int total_likes);
+    Results addCommentByUn(String username,String content,int total_likes);
 
-    public AdminResults getAdminComment(int page, int limit);
+    AdminResults getAdminComment(int page, int limit);
 
 }

@@ -10,12 +10,10 @@
     <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
 </head>
 <body>
-<div style="margin-bottom: 5px;">
-
-    <!-- 示例-970 -->
-    <ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px" data-ad-client="ca-pub-6111334333458862" data-ad-slot="3820120620"></ins>
-
-</div>
+<!--<div style="margin-bottom: 5px;">-->
+<!--    &lt;!&ndash; 示例-970 &ndash;&gt;-->
+<!--    <ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px" data-ad-client="ca-pub-6111334333458862" data-ad-slot="3820120620"></ins>-->
+<!--</div>-->
 
 <div class="layui-btn-group demoTable">
     <button class="layui-btn" data-type="getCheckData">获取选中行数据</button>
@@ -23,7 +21,7 @@
     <button class="layui-btn" data-type="isAll">验证是否全选</button>
 </div>
 
-<table class="layui-table" lay-data="{width: 1280, height:650, url:'/comment/getAdminComment', page:true, id:'idTest'}" lay-filter="demo">
+<table class="layui-table" lay-data="{width: 1020, height:480, url:'/comment/getAdminComment', page:true, id:'idTest'}" lay-filter="demo">
     <thead>
     <tr>
         <th lay-data="{type:'checkbox', fixed: 'left'}"></th>
@@ -31,7 +29,6 @@
         <th lay-data="{field:'username', width:80}">用户名</th>
         <th lay-data="{field:'creatTime', width:80, sort: true}">性别</th>
         <th lay-data="{field:'content', width:80}">内容</th>
-        <th lay-data="{field:'content', width:160}">其他</th>
         <th lay-data="{field:'content', width:80, sort: true}">其他</th>
         <th lay-data="{field:'content', width:80}">其他</th>
         <th lay-data="{field:'content', width:135, sort: true}">其他</th>
@@ -46,7 +43,6 @@
     <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
-
 
 <script src="../../layui.js" charset="utf-8"></script>
 <!-- 注意：如果你直接复制所有代码到本地，上述 JS 路径需要改成你本地的 -->

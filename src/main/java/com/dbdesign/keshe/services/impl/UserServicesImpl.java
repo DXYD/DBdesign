@@ -8,10 +8,8 @@ import com.dbdesign.keshe.services.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.dbdesign.keshe.results.*;
-import org.w3c.dom.Node;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author codemilk
@@ -21,6 +19,11 @@ public class UserServicesImpl implements UserServices {
 
     @Autowired
     UserMapper userMapper;
+
+    @Override
+    public Results login(String username, String password) {
+        return null;
+    }
 
     @Override
     public List<User> querylistuser() {
@@ -67,4 +70,16 @@ public class UserServicesImpl implements UserServices {
         List<Note> notes = userMapper.getnotes();
         return new Results<Note>(1, "成功啦", notes);
     }
+
+    @Override
+    public Results existUserByUn(String username) {
+        if (userMapper.existUserByUn(username)!=null){
+            return new Results(1,"存在该用户");
+
+        }
+        else {
+            return new Results(0,"不存在该用户");
+        }
+    }
+
 }

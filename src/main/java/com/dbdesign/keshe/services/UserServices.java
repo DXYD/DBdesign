@@ -18,6 +18,7 @@ public interface UserServices {
 
     List<Note> queryNoteInfoById(int wordid);
 
+    Results login(String username,String password);
 
     Results addnote(int wordid);
 
@@ -26,4 +27,6 @@ public interface UserServices {
     Results delnote(int wordid);
 
     Results<Note> getnotes();
+
+    Results existUserByUn(String username);
 }

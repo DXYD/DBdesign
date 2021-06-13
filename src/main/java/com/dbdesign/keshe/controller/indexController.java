@@ -29,6 +29,9 @@ public class indexController {
         return userService.querylistuser();
     }
 
+    @GetMapping("/existUserByUn")
+    public Results existUserByUn(String username){return userService.existUserByUn(username);}
+
     @GetMapping("/queryWordInfo")
     public List<enWords> queryWordInfo(String word) {
         return userService.queryWordInfo(word);
